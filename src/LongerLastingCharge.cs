@@ -45,7 +45,7 @@ namespace LongerLastingCharge
             Settings.AddHeader("Flashlight Consumption Control");
 
             Settings.AddText("This setting controls how quickly the flashlight consumes battery power. Lower values mean slower consumption." +
-                "The game simply subtracts this number in total from the remaining charge once every second.");
+                "The game simply subtracts this number in total from the remaining charge once every second. A value of 0 will result in infinite charge!");
 
             flashlight_charge_duration_text = Settings.AddText("Full Charge Duration: " + flashlight_dur_text);
 
