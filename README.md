@@ -15,10 +15,11 @@ The flashlight takes the consumption rate directly instead. In this case, a lowe
 
 Note: For the flashlight, a dishcarge rate of zero will result in an infinite flashlight!
 
+<br>
 <p align="center">
   <img src="/Resources/Longer_Lasting_Charge_Screenshot1.png" alt="An image of the mod's settings interface as displayed in game"/>
+  <p align="center">The MSCLoader Settings Interface</p>
 </p>
-
-The MSCLoader Settings Interface
+<br>
 
 Enjoy! If you have any suggestions or issues with this mod, please let me know!
