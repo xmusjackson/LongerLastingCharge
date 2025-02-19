@@ -20,6 +20,7 @@ public class RadioModifier : MonoBehaviour
             return;
         }
 
+        // This object has two PlayMakers, the second one (called "Charge") is the one we want
         _radio_itemx_play = _radio_itemx.transform.Find("Play").GetComponents<PlayMakerFSM>()[1];
 
         if (_radio_itemx_play == null)
