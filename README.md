@@ -9,7 +9,14 @@ This repository contains the code for a My Summer Car mod which provides configu
 
 The sliders are available in the MCSLoader menu by clicking the gear icon under the mod's label. There will be two sliders, One to control the Boombox and the other to control the Flashlight. 
 
-The two work a little differently; The Boombox takes a number to be used as the consumption divider. The game divides 1 by this number and multiplies that by the volume level to get the discharge rate (the amount of charge lost per second). A higher number will result in a longer charge duration.
+The two work a little differently; The Boombox takes a number to be used as the consumption divider. The game divides 1 by this number and multiplies that by the volume level to get the discharge rate (the amount of charge lost per second). A higher number will result in a longer charge duration. Here is a visualization of the equation:
+
+<br>
+<p align="center">
+  <img src="/Resources/RadioDischargeEquation.png" alt="An image of a mathematical equation as detailed in the previous paragraph"/>
+</p>
+
+!(An image of a mathematical equation as detailed in the previous paragraph)[/Resources/RadioDischargeEquation.png]
 
 The flashlight takes the consumption rate directly instead. In this case, a lower value will result in a longer charge duration.
 
