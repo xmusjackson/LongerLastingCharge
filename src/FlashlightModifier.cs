@@ -21,23 +21,15 @@ public class FlashlightModifier : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < _flashlight_itemx.transform.childCount; i++)
-        {
-            if (_flashlight_itemx.transform.GetChild(i).name.Equals("FlashLight"))
-            {
-                _flashlight_itemx_flashlight = _flashlight_itemx.transform.GetChild(i).GetComponent<PlayMakerFSM>();
-            }
-        }
+        _flashlight_itemx_flashlight = _flashlight_itemx.transform.Find("FlashLight").GetComponent<PlayMakerFSM>();
 
         if (_flashlight_itemx_flashlight == null)
         {
             ModConsole.LogError("flashlight(itemx) child \"FlashLight\" not found! Aborting!");
             return;
         }
-        else
-        {
-            flashlight_consumption = _flashlight_itemx_flashlight.FsmVariables.FindFsmFloat("Consumption");
-        }
+        
+        flashlight_consumption = _flashlight_itemx_flashlight.FsmVariables.FindFsmFloat("Consumption");
 
         if (flashlight_consumption == null)
         {

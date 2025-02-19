@@ -1,6 +1,7 @@
 ﻿using MSCLoader;
 using UnityEngine;
 using HutongGames.PlayMaker;
+using MSCLoader.Helper;
 
 public class RadioModifier : MonoBehaviour
 {
@@ -20,23 +21,15 @@ public class RadioModifier : MonoBehaviour
             return;
         }
 
-        for (int i = 0; i < _radio_itemx.transform.childCount; i++)
-        {
-            if (_radio_itemx.transform.GetChild(i).name.Equals("Play"))
-            {
-                _radio_itemx_play = _radio_itemx.transform.GetChild(i).GetComponents<PlayMakerFSM>()[1];
-            }
-        }
+        _radio_itemx_play = _radio_itemx.transform.Find("Play").GetComponents<PlayMakerFSM>()[1];
 
         if (_radio_itemx_play == null)
         {
             ModConsole.LogError("radio(itemx) child \"Play\" not found! Aborting!");
             return;
         }
-        else
-        {
-            radio_consumption_divider = _radio_itemx_play.FsmVariables.FindFsmFloat("ConsumptionDivider");
-        }
+        
+        radio_consumption_divider = _radio_itemx_play.FsmVariables.FindFsmFloat("ConsumptionDivider");
 
         if (radio_consumption_divider == null)
         {
