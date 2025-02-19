@@ -4,11 +4,11 @@ using HutongGames.PlayMaker;
 
 public class RadioModifier : MonoBehaviour
 {
-    private GameObject _radio_itemx = null;
+    private readonly GameObject _radio_itemx = null;
 
-    private PlayMakerFSM _radio_itemx_play = null;
+    private readonly PlayMakerFSM _radio_itemx_play = null;
 
-    private FsmFloat radio_consumption_divider = null;
+    private readonly FsmFloat radio_consumption_divider = null;
 
     RadioModifier()
     {

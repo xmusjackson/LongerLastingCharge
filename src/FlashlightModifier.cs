@@ -5,11 +5,11 @@ using HutongGames.PlayMaker;
 
 public class FlashlightModifier : MonoBehaviour
 {
-    private GameObject _flashlight_itemx = null;
+    private readonly GameObject _flashlight_itemx = null;
 
-    private PlayMakerFSM _flashlight_itemx_flashlight = null;
+    private readonly PlayMakerFSM _flashlight_itemx_flashlight = null;
 
-    private FsmFloat flashlight_consumption = null;
+    private readonly FsmFloat flashlight_consumption = null;
 
     FlashlightModifier()
     {
